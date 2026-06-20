@@ -33,7 +33,7 @@ Sentiment labels were derived from star ratings:
 ## Pipeline
 
 ```
-Raw text
+Raw review text
   → Cleaning         (HTML removal, lowercasing, emoticon handling, punctuation removal)
   → Tokenisation     (custom regex tokenizer — contractions preserved for negation context)
   → Lemmatisation    (WordNetLemmatizer)
@@ -97,13 +97,11 @@ Raw text
 
 ```
 spotify-sentiment-analysis/
-├── spotify_sentiment_analysis.ipynb   # main notebook (with outputs)
-├── reviews.csv                        # Spotify reviews dataset
-├── utils/
-│   └── plot_confusion_matrix.py       # confusion matrix helper
-├── requirements.txt
 ├── README.md
-└── .gitignore
+├── plot_confusion_matrix.py         # confusion matrix helper function
+├── requirements.txt
+├── reviews.csv                      # Spotify reviews dataset
+└── spotify_sentiment_analysis.ipynb # main notebook (with outputs)
 ```
 
 ---
@@ -112,11 +110,11 @@ spotify-sentiment-analysis/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/spotify-sentiment-analysis.git
+git clone https://github.com/Dwis97/spotify-sentiment-analysis.git
 cd spotify-sentiment-analysis
 
 # 2. Create and activate a virtual environment
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate  # on Windows: venv\Scripts\activate
 
 # 3. Install dependencies
